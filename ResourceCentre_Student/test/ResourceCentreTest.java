@@ -52,6 +52,19 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//WinnieYong
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+			
+		//Given an empty list, after adding 1 item, the size of the list is 1
+		ResourceCentre.addChromebook(chromebookList, cb1);		
+		assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
+				
+		//The item just added is as same as the first item of the list
+		assertSame("Test that Chromebook is added same as 1st item of the list?", cb1, chromebookList.get(0));
+				
+		//Add another item. test The size of the list is 2?
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test that Chromebook arraylist size is 2?", 2, chromebookList.size());
 	}
 	
 	@Test
@@ -106,12 +119,57 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		//Test if camcorder 1 is available to loan
+		boolean cam1Available = cc1.getIsAvailable();
+		boolean available1 = true;
+		assertEquals("Camcorder 1 is available to loan", available1, cam1Available);
+		
+		//Test if camcorder 1 is available to loan
+		boolean cam2Available = cc2.getIsAvailable();
+		boolean available2 = true;
+		assertEquals("Camcorder 2 is available to loan", available2, cam2Available);
+		
+		//Given that camcorder 1 is available
+		cc1.setIsAvailable(false);
+		boolean cam1Loaned = cc1.getIsAvailable();
+		boolean loaned1 = false;
+		assertEquals("Camcorder 1 is now loaned", loaned1, cam1Loaned);
+		
+		//Given that camcorder 2 is available
+		cc2.setIsAvailable(false);
+		boolean cam2Loaned = cc2.getIsAvailable();
+		boolean loaned2 = false;
+		assertEquals("Camcorder 2 is now loaned", loaned2, cam2Loaned);
+		
 	}
 	
 	@Test
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here test 1
+		
+		//Test if chromebook 1 is available to loann
+		boolean chrome1Available = cb1.getIsAvailable();
+		boolean available1 = true;
+		assertEquals("Camcorder 1 is available to loan", available1, chrome1Available);
+		
+		//Test if chromebook 1 is available to loan
+		boolean chrome2Available = cb2.getIsAvailable();
+		boolean available2 = true;
+		assertEquals("Camcorder 2 is available to loan", available2, chrome2Available);
+		
+		//Given that chromebook 1 is availablee
+		cb1.setIsAvailable(false);
+		boolean chrome1Loaned = cb1.getIsAvailable();
+		boolean loaned1 = false;
+		assertEquals("Camcorder 1 is now loaned", loaned1, chrome1Loaned);
+		
+		//Given that chromebook 2 is available
+		cb2.setIsAvailable(false);
+		boolean chrome2Loaned = cb2.getIsAvailable();
+		boolean loaned2 = false;
+		assertEquals("Camcorder 2 is now loaned", loaned2, chrome2Loaned);
+		
 	}
 	
 	@Test
