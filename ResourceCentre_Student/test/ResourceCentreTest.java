@@ -138,7 +138,7 @@ public class ResourceCentreTest {
 		cb2.setIsAvailable(false);
 		boolean chrome2Loaned = cb2.getIsAvailable();
 		boolean loaned2 = false;
-		assertEquals("Camcorder 2 is now ", loaned2, chrome2Loaned);
+		assertEquals("Camcorder 2 is now loaned", loaned2, chrome2Loaned);
 		
 	}
 	
