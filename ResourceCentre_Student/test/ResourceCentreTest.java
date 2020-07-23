@@ -129,7 +129,7 @@ public class ResourceCentreTest {
 	@Test
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
-		// write your code here
+		// write your code here test 1
 		
 		//Test if chromebook 1 is available to loann
 		boolean chrome1Available = cb1.getIsAvailable();
