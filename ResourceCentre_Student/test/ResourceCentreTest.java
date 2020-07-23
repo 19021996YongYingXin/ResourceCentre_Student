@@ -119,7 +119,6 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
-		
 		//Test if camcorder 1 is available to loan
 		boolean cam1Available = cc1.getIsAvailable();
 		boolean available1 = true;
