@@ -159,7 +159,7 @@ public class ResourceCentreTest {
 		cb2.setIsAvailable(false);
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020");
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
-		//error condition
+		// error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CB0012", "8-8-2020");
 		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
 		
