@@ -82,7 +82,6 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
 		
 		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
