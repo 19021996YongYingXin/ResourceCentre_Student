@@ -122,19 +122,22 @@ public class ResourceCentreTest {
 		
 		//Test if Item list is not null but empty - boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to loan from", camcorderList);
-		
 		ResourceCentre.addCamcorder(camcorderList, cc1);
+		
 		//normal
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
 		assertTrue("Test if an available item is ok to loan?", ok);
+		
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020");
 		assertFalse("Test if a same item is NOT ok to loan again?", ok);
+		
 		//error condition
 		ResourceCentre.addCamcorder(camcorderList, cc2);
 		cc2.setIsAvailable(false);
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020");
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020");
 		assertFalse("Teset that non-existing item is NOT ok to loan?", ok);
@@ -148,17 +151,21 @@ public class ResourceCentreTest {
 		
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
+		
 		//normal
 		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020");
 		assertTrue("Test if an available available item is ok to loan?", ok);
+		
 		//error condition
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020");
 		assertFalse("Test if the same item is NOT ok to loan again?", ok);
-		//error
+		
+		//error condition
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		cb2.setIsAvailable(false);
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020");
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		
 		// error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CB0012", "8-8-2020");
 		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
