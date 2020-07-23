@@ -154,7 +154,7 @@ public class ResourceCentre {
 		System.out.println(output);
 	}
 
-	//================================= Option 2 Add =================================
+	//================================= Option 2 Add ==================================
 	public static Camcorder inputCamcorder() {
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");

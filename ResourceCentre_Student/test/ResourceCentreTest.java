@@ -141,7 +141,7 @@ public class ResourceCentreTest {
 		boolean available2 = true;
 		assertEquals("Camcorder 2 is available to loan", available2, chrome2Available);
 		
-		//Given that chromebook 1 is available
+		//Given that chromebook 1 is availablee
 		cb1.setIsAvailable(false);
 		boolean chrome1Loaned = cb1.getIsAvailable();
 		boolean loaned1 = false;
