@@ -118,7 +118,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
-		//Test if chromebook 1 is available to loan
+		//Test if chromebook 1 is available to loann
 		boolean chrome1Available = cb1.getIsAvailable();
 		boolean available1 = true;
 		assertEquals("Camcorder 1 is available to loan", available1, chrome1Available);
